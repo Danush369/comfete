@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMFETE 2023</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body{background-color: #FED049;}
+        .quiz-container {
+          max-width: 800px;font-family: sans-serif;
+          margin: 50px auto;box-sizing: border-box;
+          text-align: center;padding:auto 25%;
+        }
+  
+        .question {
+          font-size: 20px;background-color: #3D5656;font-size: 1.3rem;
+          padding: 20px;border-radius:5%;color:white;text-align: start;
+        }
+  
+        .options {
+          display: flex;flex-direction: column;
+          justify-content: space-around;
+          margin-top: 20px;
+        }
+  
+        .option {
+          font-size: 18px;margin:10px auto;
+          padding: 10px 20px;text-align: start;
+          border-radius: 4px;
+          border-color:#913175;
+          background-color:#FED049;
+          color:#3D5656;
+          cursor: pointer;
+        }
+  
+        .option:hover {
+          background-color: #3D5656;
+          color:#FED049;
+        }
+  
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 50px;
+        }
+  
+        .button {
+          background-color:#3D5656;
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 20px;
+          width: 120px;
+        }
+  
+        .button:hover {
+          background-color: #3D5656;
+        }
+  
+        .question-number {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .selected{background-color:#68B984;color:3D5656;}
+        .number {
+          background-color: #FF7F3F;
+          color: #3D5656;
+          padding: 8px 16px;
+          border-radius: 50%;
+          border-color: #3d8556;
+          margin: 0 10px;
+          cursor: pointer;
+        }
+        .selectDot{background-color:#3D5656;color:#FF7F3F;}
+        .submit{padding:10px 20px;background-color:#3D5656;
+        color:#CFFDE1;font-size: 1.2rem;border:none;
+        border-radius:5%;margin-left:40%;}
+        .submit:hover{background-color:#FF7F3F ;}
+      </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+          <p id="question">1.Which planet is closest to the Sun ?</p>
+        </div>
+        <div class="options">
+          <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+          <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+          <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+          <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+        </div>
+        <div class="question">
+            <p id="question">2.Which planet is closest to the Sun ?</p>
+          </div>
+          <div class="options">
+            <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+            <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+            <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+            <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+          </div>
+          <div class="question">
+            <p id="question">3.Which planet is closest to the Sun ?</p>
+          </div>
+          <div class="options">
+            <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+            <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+            <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+            <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+          </div>
+          <div class="question">
+            <p id="question">4.Which planet is closest to the Sun ?</p>
+          </div>
+          <div class="options">
+            <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+            <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+            <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+            <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+          </div>
+          <div class="question">
+            <p id="question">5.Which planet is closest to the Sun ?</p>
+          </div>
+          <div class="options">
+            <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+            <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+            <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+            <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+          </div>
+          <div class="question">
+            <p id="question">6.Which planet is closest to the Sun ?</p>
+          </div>
+          <div class="options">
+            <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+            <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+            <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+            <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+          </div>
+          <div class="question">
+            <p id="question">7.Which planet is closest to the Sun ?</p>
+          </div>
+          <div class="options">
+            <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+            <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+            <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+            <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+          </div>
+          <div class="question">
+            <p id="question">8.Which planet is closest to the Sun ?</p>
+          </div>
+          <div class="options">
+            <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+            <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+            <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+            <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+          </div>
+          <div class="question">
+            <p id="question">9.Which planet is closest to the Sun ?</p>
+          </div>
+          <div class="options">
+            <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+            <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+            <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+            <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+          </div>
+          <div class="question">
+            <p id="question">10.Which planet is closest to the Sun ?</p>
+          </div>
+          <div class="options">
+            <div class="option" id="option1" onclick="chooseOption(this)">a.Mercury</div>
+            <div class="option" id="option2" onclick="chooseOption(this)">b.Venus</div>
+            <div class="option" id="option3" onclick="chooseOption(this)">c.Earth</div>
+            <div class="option" id="option4" onclick="chooseOption(this)">d.Mars</div>
+          </div>
+          
+        <div class="buttons">
+          <button class="button" id="previous" onclick="previousQuestion(-1);">Previous</button>
+          <button class="button" id="next" onclick="nextQuestion(+1);">Next</button>
+        </div>
+        <div class="question-number">
+          <div class="number" id="number1" onclick="goToQuestion(1)">1</div>
+          <div class="number" id="number2" onclick="goToQuestion(2)">2</div>
+          <div class="number" id="number3" onclick="goToQuestion(3)">3</div>
+          <div class="number" id="number4" onclick="goToQuestion(4)">4</div>
+          <div class="number" id="number5" onclick="goToQuestion(5)">5</div>
+          <div class="number" id="number6" onclick="goToQuestion(6)">6</div>
+          <div class="number" id="number7" onclick="goToQuestion(7)">7</div>
+          <div class="number" id="number8" onclick="goToQuestion(8)">8</div>
+          <div class="number" id="number9" onclick="goToQuestion(9)">9</div>
+          <div class="number" id="number10" onclick="goToQuestion(10)">10</div>
+        </div>
+    </div>
+    <button class="submit">Submit</button>
+    
+    <script src="index.js"></script>
+</body>
+</html>
