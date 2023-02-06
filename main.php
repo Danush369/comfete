@@ -90,6 +90,11 @@ include("fdata.php");
       </style>
 </head>
 <body>
+    <?php
+$name = $_GET['name'];  
+$school = $_GET['school'];  
+echo "<h1 id='pname'>$name</h1>"."<h1 id='sname'>$school</h1>";
+?>
     <div class="quiz-container">
       <?php
       if(is_array($fetchData)){      
