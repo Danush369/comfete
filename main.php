@@ -10,7 +10,14 @@ include("fdata.php");
     <title>COMFETE 2023</title>
     <style>
         *{padding: 0;margin: 0;}
-        body{background-color: #FED049;}
+        body{
+          height: 100%;
+          background-image: url('frame.jpg');
+          background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center top;
+          }
         .quiz-container {
           max-width: 800px;font-family: sans-serif;
           margin: 50px auto;box-sizing: border-box;
@@ -93,7 +100,7 @@ include("fdata.php");
     <?php
 $name = $_GET['name'];  
 $school = $_GET['school'];  
-echo "<h1 id='pname'>$name</h1>"."<h1 id='sname'>$school</h1>";
+echo "<p id='pname'><b>$name</b></p>"."<p id='sname'>$school</p>";
 ?>
     <div class="quiz-container">
       <?php
@@ -102,7 +109,7 @@ echo "<h1 id='pname'>$name</h1>"."<h1 id='sname'>$school</h1>";
       foreach($fetchData as $data){
     ?>
         <div class="question">
-          <p id="question"><?php echo $data['question']??''; ?></p>
+          <p id="question"><?php echo $data['question']; ?></p>
         </div>
         <div class="options">
           <div class="option" id="option1" onclick="chooseOption(this)"><?php echo $data['op1']??''; ?></div>
@@ -153,7 +160,7 @@ echo "<h1 id='pname'>$name</h1>"."<h1 id='sname'>$school</h1>";
           <div class="number" id="number10" onclick="goToQuestion(30)">30</div>
         </div>
     </div>
-    <button class="submit">Submit</button>
+    <button class="submit" onclick="checkmark()">Submit</button>
     
     <script src="index.js"></script>
 </body>
