@@ -62,4 +62,12 @@ function checkmark(){
   }
   console.log("Marks="+marks);
   window.location.replace('finish.html')
+  n=document.getElementById('pname').innerHTML
+  s=document.getElementById('sname').innerHTML
+  document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "marks=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "sname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "name="+n;
+  document.cookie = "sname="+s;
+  document.cookie = "marks="+marks;
 }

@@ -8,99 +8,13 @@ include("fdata.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMFETE 2023</title>
-    <style>
-        *{padding: 0;margin: 0;}
-        body{
-          height: 100%;
-          background-image: url('frame.jpg');
-          background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center top;
-          }
-        .quiz-container {
-          max-width: 800px;font-family: sans-serif;
-          margin: 50px auto;box-sizing: border-box;
-          text-align: center;padding:auto 25%;
-        }
-  
-        .question {
-          font-size: 20px;background-color: #3D5656;font-size: 1.3rem;
-          padding: 20px;border-radius:5%;color:white;text-align: start;
-        }
-  
-        .options {
-          display: flex;flex-direction: column;
-          justify-content: space-around;
-          margin-top: 20px;
-        }
-  
-        .option {
-          font-size: 18px;margin:10px auto;
-          padding: 10px 20px;text-align: start;
-          border-radius: 4px;
-          border-color:#913175;
-          background-color:#FED049;
-          color:#3D5656;
-          cursor: pointer;
-        }
-  
-        .option:hover {
-          background-color: #3D5656;
-          color:#FED049;
-        }
-  
-        .buttons {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 50px;
-        }
-  
-        .button {
-          background-color:#3D5656;
-          color: white;
-          padding: 16px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-size: 20px;
-          width: 120px;
-        }
-  
-        .button:hover {
-          background-color: #3D5656;
-        }
-  
-        .question-number {
-          display: flex;
-          justify-content: center;
-          margin-top: 50px;
-        }
-        .selected{background-color:#D61C4E;color:white;}
-        .number {
-          background-color: #FED049;
-          color: #3D5656;
-          padding: 8px 16px;
-          border-radius: 50%;
-          border-color: #3d8556;
-          margin: 0 10px;
-          cursor: pointer;
-        }
-        .number:hover{
-          background-color:white;
-        }
-        .selectDot{background-color:#3D5656;color:white;border-radius: 50%;}
-        .submit{padding:10px 20px;background-color:#3D5656;
-        color:white;font-size: 1.2rem;border:none;
-        border-radius:5%;margin-left:40%;}
-        .submit:hover{background-color:#FF7F3F ;color:#3D5656;}
-      </style>
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
     <?php
 $name = $_GET['name'];  
 $school = $_GET['school'];  
-echo "<p id='pname'><b>$name</b></p>"."<p id='sname'>$school</p>";
+echo "<div class='avatar-container'><div class='avatar'><img src='images/avatar.png' alt='Profile'></div><b><p class='avatar-name' id='pname'>$name</p></b>"."<div id='sname' class='avatar-school'>$school</div></div>";
 ?>
     <div class="quiz-container">
       <?php
@@ -112,10 +26,10 @@ echo "<p id='pname'><b>$name</b></p>"."<p id='sname'>$school</p>";
           <p id="question"><?php echo $data['question']; ?></p>
         </div>
         <div class="options">
-          <div class="option" id="option1" onclick="chooseOption(this)"><?php echo $data['op1']??''; ?></div>
-          <div class="option" id="option2" onclick="chooseOption(this)"><?php echo $data['op2']??''; ?></div>
-          <div class="option" id="option3" onclick="chooseOption(this)"><?php echo $data['op3']??''; ?></div>
-          <div class="option" id="option4" onclick="chooseOption(this)"><?php echo $data['op4']??''; ?></div>
+          <div class="option" id="option1" onclick="chooseOption(this)"><?php echo $data['op1'] ?></div>
+          <div class="option" id="option2" onclick="chooseOption(this)"><?php echo $data['op2'] ?></div>
+          <div class="option" id="option3" onclick="chooseOption(this)"><?php echo $data['op3'] ?></div>
+          <div class="option" id="option4" onclick="chooseOption(this)"><?php echo $data['op4'] ?></div>
         </div>
 
         <?php
@@ -162,6 +76,6 @@ echo "<p id='pname'><b>$name</b></p>"."<p id='sname'>$school</p>";
     </div>
     <button class="submit" onclick="checkmark()">Submit</button>
     
-    <script src="index.js"></script>
+    <script src="script/index.js"></script>
 </body>
 </html>
