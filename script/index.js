@@ -71,3 +71,4 @@ function checkmark(){
   document.cookie = "sname="+s;
   document.cookie = "marks="+marks;
 }
+
