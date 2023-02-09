@@ -23,6 +23,7 @@ function showQuestion(n){
    }
   numbers[a].className+=' selectDot';
   numbers[a].scrollIntoView();
+  checkSelected();
 }
 function previousQuestion(n){
     a=a+n;
@@ -35,13 +36,20 @@ function nextQuestion(n){
 function chooseOption(option){
   for(let i=0;i<options[a].children.length;i++){
       options[a].children[i].classList.remove('selected');
-  }
-  if(option.classList==='selected'){
-      option.classList.remove('selected');
-  }else{
-     option.classList.toggle('selected');
-  }
+     }
+     if(!option.classList.contains('selected')){
+      option.classList.add('selected');
+     }
    selected[a]=option.id;
+}
+function checkSelected(){
+  for(let i=0;i<numbers.length;i++){
+    if(selected[i]){
+      numbers[i].style.backgroundColor="rgb(1,31,238)";
+    }else{
+      numbers[i].style.backgroundColor="";
+    }
+  }
 }
 function goToQuestion(z){
     a=z-1;
