@@ -11,6 +11,7 @@ function closeQuestions(){
 }
 closeQuestions();
 showQuestion(a);
+
 function showQuestion(n){
   if(n<0){a=0;}
   if(n>=questions.length){a=questions.length-1;}
@@ -21,6 +22,7 @@ function showQuestion(n){
     numbers[i].className=numbers[i].className.replace(' selectDot','');
    }
   numbers[a].className+=' selectDot';
+  numbers[a].scrollIntoView();
 }
 function previousQuestion(n){
     a=a+n;
@@ -63,12 +65,42 @@ function checkmark(){
   console.log("Marks="+marks);
   window.location.replace('finish.html')
   n=document.getElementById('pname').innerHTML
-  s=document.getElementById('sname').innerHTML
+  e=document.getElementById('email').innerHTML
+  c=document.getElementById('cname').innerHTML
   document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   document.cookie = "marks=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-  document.cookie = "sname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "cname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   document.cookie = "name="+n;
-  document.cookie = "sname="+s;
+  document.cookie = "email="+e;
+  document.cookie = "cname="+c;
   document.cookie = "marks="+marks;
 }
+//timer
+countdown('timer',30,0);
+function countdown( elementName, minutes, seconds )
+{
+  var element, endTime, hours, mins, msLeft, time;
+  function twoDigits( n )
+  {
+    return (n <= 9 ? "0" + n : n);
+  }
+  element = document.getElementById( elementName );
+  endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+  
+  updateTimer();
 
+  function updateTimer()
+  {
+      msLeft = endTime - (+new Date);
+      if ( msLeft < 1000 ) {
+          element.innerHTML = "Time is up!";
+      } else {
+          time = new Date( msLeft );
+          hours = time.getUTCHours();
+          mins = time.getUTCMinutes();
+          element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+          setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+      }
+  }
+}

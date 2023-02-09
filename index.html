@@ -19,14 +19,12 @@
         .header h1 {
           font-size: 50px;letter-spacing: 2px;
         }
-  
         .header p {
           font-size: 20px;margin:5% auto;
         }
-  
         .btn-juicy {
-	box-shadow: 5px 10px#a117a1;
-	transition: 0.2s;
+        box-shadow: 5px 10px#a117a1;
+        transition: 0.2s;
 }
 .btn-juicy:hover:active {
 	transition: 0.1s;
@@ -38,11 +36,11 @@
 	transform: translate(-1px, -2px);
 }
 .btn {
-	color: black;
 	border-radius: 20px;
+  font-family: inherit;
   border-color: aliceblue;
 	background-color: #f942f8;
-	color: black;
+	color: rgb(255, 255, 255);
 	text-decoration: none;
 	padding: 20px;
 	margin: 10px;
@@ -61,15 +59,17 @@ body {
         <div class="header">
           <h1>COMFETE 2023</h1>
           <p>The Ultimate Quiz Competition</p>
-          <button class="btn btn-juicy" onclick="transitionToPage('home.html')"><b>Enter</b></button>
+          <button class="btn btn-juicy" onclick="transitionToPage('menu.html')"><b>Enter</b></button>
         </div>
       </body>
 
       <script>
-      window.transitionToPage = function(href) {
-        document.querySelector('body').style.opacity = 0
+      window.transitionToPage = function(h) {
+        let b=document.querySelector('body');
+        b.style.opacity = 0
         setTimeout(function() { 
-            window.location.href = href
+            window.location.href = h;
+            b.style.opacity=1
         }, 500)
     }
     
