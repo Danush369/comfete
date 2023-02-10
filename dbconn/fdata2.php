@@ -2,7 +2,7 @@
 include("db.php");
 
 $db= $conn;
-$tableName="questions";
+$tableName="round2";
 $columns= ['id', 'question','op1','op2','op3','op4'];
 $fetchData = fetch_data($db, $tableName, $columns);
 
@@ -16,7 +16,7 @@ function fetch_data($db, $tableName, $columns){
 }else{
 
 $columnName = implode(", ", $columns);
-$query = "SELECT ".$columnName." FROM $tableName"." ORDER BY id DESC";
+$query = "SELECT ".$columnName." FROM $tableName"." ORDER BY id";
 $result = $db->query($query);
 
 if($result== true){ 

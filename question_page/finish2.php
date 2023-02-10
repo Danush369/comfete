@@ -9,7 +9,7 @@
     <title>Finished</title>
     <style>
         body{
-            background-image: url('images/ty.jpg');
+            background-image: url('../images/ty.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -30,13 +30,21 @@
 <body>
     <h1>Thank You</h1>
     <h3>Your Response is Submitted.</h3>
-    <script>
-    let cname=document.getcookie
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  console.log(ca)
-  document.write("<p>"+ca[0]+ca[1]+ca[2]+"</p>")
-    </script>
+    <?php
+    include("../dbconn/db.php");
+    $name=$_COOKIE["name"];
+    $cname=$_COOKIE["cname"];
+    $email=$_COOKIE["email"];
+    $marks=$_COOKIE["marks"];
+    echo "<p> name=$name email=$email cname=$cname marks=$marks </p>";
+    $sql = "INSERT INTO  student_r2 (`S_Name`, `E_id`, `C_Name`, `R2_Marks`) VALUES ('$name', '$email', '$cname','$marks')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "<p>New record created successfully</p>";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+    ?>
 </body>
 </html>

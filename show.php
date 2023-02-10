@@ -1,5 +1,5 @@
 <?php
-include("fdata.php");
+include("fdata1.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,13 +15,10 @@ include("fdata.php");
       <table class="table table-bordered">
        <thead><tr><th>S.N</th>
 
-         <th>Full Name</th>
-         <th>Gender</th>
+         <th>Name</th>
          <th>Email</th>
-         <th>Mobile Number</th>
-         <th>Address</th>
-         <th>City</th>
-         <th>State</th>
+         <th>Collage Name</th>
+         <th>Marks</th>
     </thead>
     <tbody>
   <?php
@@ -31,12 +28,10 @@ include("fdata.php");
     ?>
       <tr>
       <td><?php echo $sn; ?></td>
-      <td><?php echo $data['id']??''; ?></td>
-      <td><?php echo $data['question']??''; ?></td>
-      <td><?php echo $data['op1']??''; ?></td>
-      <td><?php echo $data['op2']??''; ?></td>
-      <td><?php echo $data['op3']??''; ?></td>
-      <td><?php echo $data['op4']??''; ?></td>
+      <td><?php echo $data['NAME']??''; ?></td>
+      <td><?php echo $data['E_ID']??''; ?></td>
+      <td><?php echo $data['C_NAME']??''; ?></td>
+      <td><?php echo $data['R1_Marks']??''; ?></td>
      </tr>
      <?php
       $sn++;}}else{ ?>
