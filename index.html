@@ -5,36 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMFETE 2023</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
     <style>
         *{padding: 0;margin: 0;}
-        body{background-image: url('quizp.jpg');background-repeat: no-repeat;background-position: center center;background-attachment: fixed;background-size: cover;}
+        body{background-image: url('images/final.jpg');background-repeat: no-repeat;background-position: center center;background-attachment: fixed;background-size: cover;}
         .header {
-          text-align: center;font-family: verdana;
-          padding: 50px;margin-top:8%;color:white;
+          text-align: center;font-family: 'Poppins', sans-serif;
+          padding: 50px;margin-top:15%;color:white;
         }
   
         .header h1 {
-          font-size: 50px;
+          font-size: 50px;letter-spacing: 2px;
         }
-  
         .header p {
           font-size: 20px;margin:5% auto;
         }
-  
-        .btn {
-          background-color: #4CAF50;
-          color: white;
-          padding: 16px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-size: 20px;
-          position:relative;top:35px;
-        }
-        a{text-decoration: none;}
-        .btn:hover {
-          background-color: #45a049;
-        }
+        .btn-juicy {
+        box-shadow: 5px 10px#a117a1;
+        transition: 0.2s;
+}
+.btn-juicy:hover:active {
+	transition: 0.1s;
+	box-shadow: 1px 2px#a117a1;
+	transform: translate(5px, 10px);
+}
+.btn-juicy:hover {
+	box-shadow: 6px 12px#a117a1;
+	transform: translate(-1px, -2px);
+}
+.btn {
+	border-radius: 20px;
+  font-family: inherit;
+  border-color: aliceblue;
+	background-color: #f942f8;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	padding: 20px;
+	margin: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
+  font-size: 17px;
+}
+body { 
+   opacity: 0;
+   transition: opacity .5s;
+}
       </style>
 </head>
 <body>
@@ -42,9 +59,23 @@
         <div class="header">
           <h1>COMFETE 2023</h1>
           <p>The Ultimate Quiz Competition</p>
-          <a href="home.html" class="btn">Login</a>
+          <button class="btn btn-juicy" onclick="transitionToPage('menu.html')"><b>Enter</b></button>
         </div>
       </body>
+
+      <script>
+      window.transitionToPage = function(h) {
+        let b=document.querySelector('body');
+        b.style.opacity = 0
+        setTimeout(function() { 
+            window.location.href = h;
+            b.style.opacity=1
+        }, 500)
+    }
+    
+    document.addEventListener('DOMContentLoaded', function(event) {
+        document.querySelector('body').style.opacity = 1
+    })</script>
 </body>
 </html>
 
