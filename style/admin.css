@@ -1,6 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
 * {font-family: 'Open Sans', sans-serif;}
 
+body{
+  cursor: url('../images/mous2.png'),auto;
+}
+
 .rwd-table {
   margin: auto;
   min-width: 300px;

@@ -46,7 +46,11 @@ if($result== true){
 return $msg;
 }
 ?>
-<h1>Round 1</h1>
+<button ><a href="#r1" style="text-decoration: none";>Round 1</a></button>
+<button ><a href="#r2" style="text-decoration: none";>Round 2</a></button>
+<button ><a href="#r3" style="text-decoration: none";>Round 3</a></button>
+<button ><a href="#r4" style="text-decoration: none";>Round 4</a></button>
+<h1 id='r1'>Brain Stormers</h1>
       <table class="rwd-table" border="1">
        <thead><tr><th>S.N</th>
 
@@ -115,8 +119,10 @@ function fetch_data1($db, $tableName, $columns){
  }
  return $msg;
  }
+
 ?>
-<h1>Round 2</h1>
+
+<h1 id='r2'>Ode on Codes</h1>
       <table class="rwd-table">
        <thead>
         <tr><th>S.N</th>
@@ -185,7 +191,8 @@ function fetch_data2($db, $tableName, $columns){
  return $msg;
  }
 ?>
-<h1>Round 3</h1>
+
+<h1 id='r3'>Adventors</h1>
       <table class="rwd-table" border="1">
        <thead><tr><th>S.N</th>
 
@@ -255,7 +262,7 @@ function fetch_data3($db, $tableName, $columns){
  return $msg;
  }
 ?>
-<h1>Round 4</h1>
+<h1 id='r4'>Lexicographers</h1>
       <table class="rwd-table" border="1">
        <thead><tr><th>S.N</th>
 

@@ -1,8 +1,15 @@
 const questions=document.getElementsByClassName('question');
 const options=document.getElementsByClassName('options');
 const numbers=document.getElementsByClassName('number');
+const modal=document.getElementById('modal');
 let a=0;
 let selected=[];
+function closeModal(){
+  modal.style.display="none";
+}
+function showModal(){
+  modal.style.display="block";
+}
 function closeQuestions(){
   for(let i=0;i<questions.length;i++){
       questions[i].style.display="none";
@@ -19,12 +26,13 @@ function showQuestion(n){
   questions[a].style.display="block";
   options[a].style.display="block";
   for(let i=0;i<numbers.length;i++){
-    numbers[i].className=numbers[i].className.replace(' selectDot','');
+    numbers[i].className=numbers[i].className.replace(' active','');
    }
-  numbers[a].className+=' selectDot';
-  numbers[a].scrollIntoView();
+  numbers[a].className+=' active';
+ // numbers[a].scrollIntoView();
   checkSelected();
 }
+
 function previousQuestion(n){
     a=a+n;
     showQuestion(a);
@@ -34,53 +42,26 @@ function nextQuestion(n){
    showQuestion(a);
 }
 function chooseOption(option){
+  if (option.classList.contains("selected")) {
+    option.classList.remove("selected");
+    
+  } else{
   for(let i=0;i<options[a].children.length;i++){
       options[a].children[i].classList.remove('selected');
      }
-     if(!option.classList.contains('selected')){
-      option.classList.add('selected');
-     }
+   option.classList.toggle('selected');
+    }
    selected[a]=option.id;
 }
 function checkSelected(){
-  for(let i=0;i<numbers.length;i++){
-    if(selected[i]){
-      numbers[i].style.backgroundColor="rgb(1,31,238)";
-    }else{
-      numbers[i].style.backgroundColor="";
-    }
+for(let i=0;i<selected.length;i++){
+  if(selected[i]){
+    numbers[i].style.backgroundColor="#004eff";
   }
+}
+  
 }
 function goToQuestion(z){
     a=z-1;
     showQuestion(a);
-}
-
-//timer
-countdown('timer',30,0);
-function countdown( elementName, minutes, seconds )
-{
-  var element, endTime, hours, mins, msLeft, time;
-  function twoDigits( n )
-  {
-    return (n <= 9 ? "0" + n : n);
-  }
-  element = document.getElementById( elementName );
-  endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-  
-  updateTimer();
-
-  function updateTimer()
-  {
-      msLeft = endTime - (+new Date);
-      if ( msLeft < 1000 ) {
-          element.innerHTML = "Time is up!";
-      } else {
-          time = new Date( msLeft );
-          hours = time.getUTCHours();
-          mins = time.getUTCMinutes();
-          element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-          setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
-      }
-  }
 }

@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMFETE 2023</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
     <style>
         *{padding: 0;margin: 0;}
-        body{background-image: url('images/final.jpg');background-repeat: no-repeat;background-position: center center;background-attachment: fixed;background-size: cover;}
+        body{
+          background-image: url('images/final.jpg');
+          background-repeat: no-repeat;user-select: none;
+          background-position: center center;
+          background-attachment: fixed;background-size: cover;
+        cursor: url('/images/mous3.png'),auto;}
         .header {
           text-align: center;font-family: 'Poppins', sans-serif;
           padding: 50px;margin-top:15%;color:white;
         }
-  
+        .adbut{padding:20px;}
         .header h1 {
           font-size: 50px;letter-spacing: 2px;
         }
@@ -52,13 +58,41 @@ body {
    opacity: 0;
    transition: opacity .5s;
 }
+
+.adbut{
+  background-color: #000039;
+  color: white;
+}
+.modal{
+    width:500px;height:200px;background-color: rgb(255, 255, 255);
+    position:absolute;top:200px;left:280px;z-index: 1;display:none;
+}
+.modal .close{
+    color:red;font-size: 3rem;font-weight: bold;
+    float:right;padding:3px 15px;
+}
+.modal p{margin:60px 70px 10px;font-size: 1.2rem;}
+.modal input{margin:5px 60px;padding:10px 20px;}
+.modal .button{padding:10px 20px;margin:30px auto;color:white;
+  background-color:#004eff;border:none;border-radius: 5px;}
+.modal .button:hover{
+    background-color:rgb(6, 67, 129) ;
+    box-shadow: 0px 0px 10px rgb(56, 89, 233);}
       </style>
+
 </head>
 <body>
     <body>
+      <button onclick="document.getElementById('modal').style.display='block';" class="adbut">Admin</button>
+      <div class="modal" id="modal">
+        <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+          <p>Enter password:</p>
+          <input type="password" name="pass" id="pass">
+          <button class="button" onclick=" adcheck()">Submit</button>
+      </div>
         <div class="header">
           <h1>COMFETE 2023</h1>
-          <p>The Ultimate Quiz Competition</p>
+          <p>The Inter-College Quiz Competition</p>
           <button class="btn btn-juicy" onclick="transitionToPage('menu.html')"><b>Enter</b></button>
         </div>
       </body>
@@ -75,7 +109,18 @@ body {
     
     document.addEventListener('DOMContentLoaded', function(event) {
         document.querySelector('body').style.opacity = 1
-    })</script>
+    })
+    
+    function adcheck(){
+      a=pass.value;
+      if (a=='ssasc54321'){
+        window.location.href='./admin.php'
+      }
+      else if(a!=null){
+        alert('Wrong Passcode')
+      }
+    }
+      </script>
 </body>
 </html>
 

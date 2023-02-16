@@ -1,0 +1,232 @@
+*{padding: 0;margin: 0;}   
+/*To split into two*/
+body   {
+    font-family: 'Raleway', sans-serif;
+    user-select: none;user-select: none;
+cursor: url('../images/mous3.png'),auto;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    cursor: url('../images/download.jpg');
+}
+.left {
+    height:100vh;
+    display: block;
+    width: 3%;
+    scrollbar-width: none;
+    overflow: auto;
+    /* background: rgb(0,4,91); */
+    background: linear-gradient(90deg, rgba(0,4,91,1) 33%, rgba(7,35,232,1) 100%);
+}
+
+.right {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    display: block;height:100vh;
+    background-image: url('../images/bgimg.avif');
+    display: no-repeat;background-attachment: fixed;
+    background-position: center center;background-size:cover;
+   
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+.quiz-container {
+    position: absolute;
+    min-width:900px;
+    top: 10%;
+    left: 5%;
+    display:flex;
+    height:550px;
+    text-align: center;
+    margin:35px auto;
+    padding:120px auto;
+}
+.ques{
+    position: absolute;
+    left: 5%;
+    top: 0%;
+    max-width: 55%;
+    min-width:55%;
+    min-height: 50px;
+    max-height: 50px;
+    font-size: 20px;
+    background-color: rgb(4, 1, 44,0.05);
+    font-size: 1rem;
+    padding: 10px 10px;
+    border-radius:5px;
+    color:white;
+    overflow: scroll;
+    text-align: left;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 1px rgb(217 224 235);
+}
+.question {
+    margin:70px 20px;
+    max-width: 55%;
+    min-width:55%;
+    min-height:400px;
+    overflow: scroll;
+    /* font-size: 20px; */
+    background-color:rgb(0, 78, 255,0.05);
+    font-size: 1rem;
+    padding: 10px 10px;
+    border-radius:5px;
+    color:white;
+    text-align: left;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 10px rgb(217, 224, 235);
+}
+.options {
+    width:25%;height:350px;
+    display: flex;flex-direction: row;flex-wrap:wrap;
+    justify-content: space-around;
+    margin: 130px auto;
+}
+/*.options{
+    display: flex;flex-direction: column;flex-wrap:wrap;
+    justify-content: space-around;width:80%;
+    margin-top: 20px;margin:20px auto;
+}*/
+.option {
+width:90%;letter-spacing: 2px;
+font-size: 18px;margin:15px 16px;display:block;
+padding: 10px 20px;text-align: start;
+border-radius: 4px;background-color:white;
+cursor: pointer;float:left;
+}
+/*.option{
+font-size: 18px;margin:8px 16px;
+padding: 10px 20px;text-align: start;
+border-radius: 4px;background-color:white;
+cursor: pointer;text-align: center;
+}*/
+      
+.option:hover {
+    background-color: #1a3ef0;
+}
+#btn-container .buttons {
+display:flex;justify-content: space-around;
+
+}
+#previous{
+    position:fixed;bottom:11%;left:20%;
+}
+#next{
+    position:fixed;bottom:11%;left:35%;
+}
+.button {
+    background-color:#004eff;
+    color: white;margin-right:10px;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 120px;
+    font-family: 'Raleway', sans-serif;
+}
+.button:hover {
+    background-color: #3956d6;box-shadow: 0px 0px 10px white;
+}
+.pagination-container {
+    display: flex;flex-wrap: wrap;justify-content: center;
+    margin:5% auto auto;
+}
+.pagination-container button{
+    border:none;
+}
+.pagination-container button:hover{
+    background-color: rgb(9, 58, 107);
+}
+.selected{background-color:rgba(0, 76, 255, 0.747);color:white;
+font-weight: bold;box-shadow: 0px 0px 10px white;
+}
+.question-number{display:flex;flex-wrap: wrap;
+    justify-content:center ;}
+.number {
+   color: white;width:50px;
+    padding: 5px;width:22px;
+    border-radius: 5px;
+    margin: 8px 3px auto;
+    cursor: pointer;
+    border: 1px solid #004eff;
+    text-align: center; 
+}
+.active{color:white;background-color:#004eff;}
+.submit{padding:10px 20px;background-color:#004eff;
+color:white;font-size: 1.2rem;border:none;font-family: 'Raleway', sans-serif;
+border-radius:5%;position:absolute;bottom:11%;right:15%;}
+.submit:hover{background-color:rgb(6, 67, 129) ;box-shadow: 0px 0px 10px white;}
+.avatar-container{min-width:420px;position:absolute;left:0px;top:0px;height:80px;color:white;font-size: 1.5rem;
+    
+margin-left: 5%;
+
+border-radius: 20px;}
+.avatar-container .avatar{
+    width:35px;height:35px;border-radius:50%;
+    margin:15px 14px auto;float:left;
+}
+.avatar-container .avatar img{
+    width:100%;height:100%;border-radius:50%;
+}
+.avatar-container .avatar-name{
+    margin:22px 60px auto;font-size: 1rem;
+    letter-spacing:2px;
+}
+.avatar-container .avatar-college{
+    width:450px;height:60px;margin-left: 64px;
+    font-size: 1rem;
+line-height:28px;}
+.avatar-container .avatar-email{
+    margin-left: 30px;font-size: 1.2rem;
+}
+#timer{
+    padding:5px 20px;border-radius: 7px;
+    color:rgb(255, 255, 255);font-size: 30px;
+    font-weight: bold;right:10px;top:10px;position:fixed;
+    text-decoration: none;
+    border: 1px solid #004eff;
+}
+.modal{
+    width:500px;height:200px;background-color: rgb(255, 255, 255);
+    position:absolute;top:200px;left:280px;z-index: 1;display:none;
+}
+.modal .close{
+    color:red;font-size: 3rem;font-weight: bold;
+    float:right;padding:3px 15px;
+}
+.modal p{margin:60px 70px 10px;}
+.modal .btn-container{
+    display:flex;justify-content: space-around;
+}
+.modal .btn-container button{padding:10px 20px;margin:30px auto;}
+.modal .btn-container button:hover{background-color:rgb(6, 67, 129) ;box-shadow: 0px 0px 10px rgb(56, 89, 233);}
+.answered{
+   background-color: rgb(1,31,238);
+}
+.unanswered{
+    background-color: red;
+}

@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 body{
-    background-image:url('../images/opt.jpg');
+    background-image:url('../images/option.jpg');
+	cursor: url('../images/mous3.png'),auto;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;user-select: none;
   background-size: cover;
 }
 #navigate{
@@ -11,6 +11,7 @@ body{
     position:fixed;bottom:10%;
 }
 #navigate button{border:none;}
+
 .container{width:40%;position:absolute;
     top:21%;left:32%;margin: auto;display:flex;flex-direction: column;
     flex-wrap: wrap; font-family: 'Raleway', sans-serif;
@@ -50,57 +51,4 @@ font-weight: lighter;}
 }
 @media only screen and (max-width:1200px){
     body{background-size: auto;}
-=======
-body{
-    background-image:url('../images/opt.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-#navigate{
-    width:100%;
-    display:flex;justify-content: space-around;flex-wrap: wrap;
-    position:fixed;bottom:10%;
-}
-#navigate button{border:none;}
-.container{width:40%;position:absolute;
-    top:21%;left:32%;margin: auto;display:flex;flex-direction: column;
-    flex-wrap: wrap; font-family: 'Raleway', sans-serif;
-}
-.container a{text-decoration: none;color:black;}
-
-
-.btn-juicy {
-	box-shadow: 5px 10px#a117a1;
-	transition: 0.2s;
-}
-.btn-juicy:hover:active {
-	transition: 0.1s;
-	box-shadow: 1px 2px#a117a1;
-	transform: translate(5px, 10px);
-}
-.btn-juicy:hover {
-	box-shadow: 6px 12px#a117a1;
-	transform: translate(-1px, -2px);
-}
-#navigate .btn{border:2px solid white;color:white;
-font-weight: lighter;}
-.container .btn,.btn {
-	color: rgb(255, 255, 255);letter-spacing: 2px;
-	border-radius: 20px;font-size: 1.5rem;
-  border-color:2px aliceblue;font-weight: bold;
-	background-color: #f942f8;
-	text-decoration: none;
-	padding:20px 10px;border:2px solid white;
-	margin: 10px;text-align: center;
-	user-select: none;
-	-webkit-user-drag: none;
-  font-size: 17px;
-}
-@media only screen and (max-width:350px){
-   .container{left:15%;}
-}
-@media only screen and (max-width:1200px){
-    body{background-size: auto;}
->>>>>>> 2a43dc2ba8b7a0a0af9bc80753889c3b79616cc8
 }

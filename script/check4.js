@@ -3,6 +3,7 @@ answers={0:"option1",1:"option1",2:"option1",3:"option1",4:"option1",5:"option1"
 13:"option1",14:"option1",15:"option1",16:"option1",17:"option1",18:"option1",
 19:"option1",20:"option1",21:"option1",22:"option1",23:"option1",24:"option1",
 25:"option1",26:"option1",27:"option1",28:"option1",29:"option1"}
+
 function checkmark(){
     marks=0
     console.log(selected);

@@ -8,6 +8,7 @@ include("../dbconn/fdata3.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMFETE 2023</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
@@ -87,15 +88,27 @@ include("../dbconn/fdata3.php");
         <?php } ?>
         <?php
         $conn->close();?>
-        <div class="buttons">
-          <button class="button pre" id="previous" onclick="previousQuestion(-1);">Previous</button>
-          <button class="button nex" id="next" onclick="nextQuestion(+1);">Next</button>
+        <div id="btn-container">
+           <div class="buttons">
+             <button class="button" id="previous" onclick="previousQuestion(-1);">Previous</button>
+             <button class="button" id="next" onclick="nextQuestion(+1);">Next</button>
+           </div>
         </div>
     </div>
   </div>
+  <div class="modal" id="modal">
+     <span class="close" onclick="closeModal()">&times;</span>
+     <p>Are You Sure, You want to Submit?</p>
+     <div class="btn-container">
+            <button class="button" onclick="checkmark()">Submit</button>
+            <button class="button" onclick="closeModal()">Cancel</button>
+     </div>
+     
+  </div>
   <div id="timer"></div>
-  <button class="submit" onclick="checkmark()">Submit</button>
+  <button class="submit" id="submit" onclick="showModal()">Submit</button>
   <script src="../script/index.js"></script>
   <script src="../script/check3.js"></script>
+  <script src="../script/timer.js"></script>
 </body>
 </html>
