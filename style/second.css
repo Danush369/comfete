@@ -13,11 +13,11 @@ cursor: url('../images/mous3.png'),auto;
 .left {
     height:100vh;
     display: block;
-    width: 3%;
+    width: 5%;
     scrollbar-width: none;
     overflow: auto;
     /* background: rgb(0,4,91); */
-    background: linear-gradient(90deg, rgba(0,4,91,1) 33%, rgba(7,35,232,1) 100%);
+    background: linear-gradient(200deg,#7b2585 15%, rgb(1 8 37)50%);
 }
 
 .right {
@@ -56,7 +56,7 @@ cursor: url('../images/mous3.png'),auto;
 .quiz-container {
     position: absolute;
     min-width:900px;
-    top: 10%;
+    top: 16%;
     left: 5%;
     display:flex;
     height:550px;
@@ -66,14 +66,14 @@ cursor: url('../images/mous3.png'),auto;
 }
 .ques{
     position: absolute;
-    left: 5%;
-    top: 0%;
+    left: 2%;
+    top: -2.5%;
     max-width: 55%;
     min-width:55%;
     min-height: 50px;
     max-height: 50px;
     font-size: 20px;
-    background-color: rgb(4, 1, 44,0.05);
+    background-color:transparent;
     font-size: 1rem;
     padding: 10px 10px;
     border-radius:5px;
@@ -81,13 +81,15 @@ cursor: url('../images/mous3.png'),auto;
     overflow: scroll;
     text-align: left;
     letter-spacing: 2px;
-    box-shadow: 0px 0px 1px rgb(217 224 235);
+    box-shadow: 0px 0px 13px rgb(217, 224, 235,0.05);
+
 }
 .question {
     margin:70px 20px;
     max-width: 55%;
     min-width:55%;
     min-height:400px;
+    max-height:400px;
     overflow: scroll;
     /* font-size: 20px; */
     background-color:rgb(0, 78, 255,0.05);
@@ -171,15 +173,21 @@ font-weight: bold;box-shadow: 0px 0px 10px white;
     padding: 5px;width:22px;
     border-radius: 5px;
     margin: 8px 3px auto;
-    cursor: pointer;
-    border: 1px solid #004eff;
+    /* cursor: pointer; */
+    border: 1px solid #ffffff;
     text-align: center; 
+}
+.number:hover{
+    background-color: #ffffff;
+    color:#1a3ef0;
+    box-shadow: 0px 0px 10px white;
+
 }
 .active{color:white;background-color:#004eff;}
 .submit{padding:10px 20px;background-color:#004eff;
 color:white;font-size: 1.2rem;border:none;font-family: 'Raleway', sans-serif;
 border-radius:5%;position:absolute;bottom:11%;right:15%;}
-.submit:hover{background-color:rgb(6, 67, 129) ;box-shadow: 0px 0px 10px white;}
+.submit:hover{background-color:#3956d6;box-shadow: 0px 0px 10px white;}
 .avatar-container{min-width:420px;position:absolute;left:0px;top:0px;height:80px;color:white;font-size: 1.5rem;
     
 margin-left: 5%;
@@ -209,6 +217,16 @@ line-height:28px;}
     font-weight: bold;right:10px;top:10px;position:fixed;
     text-decoration: none;
     border: 1px solid #004eff;
+}
+#rnd_name{
+    color:#ffffff;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    /* border-color: #ffffff; */
+    /* border:ridge; */
+    padding: 10px;
+    /* border-radius: 5px; */
+    position:fixed;right: 15%; top: 10px;
 }
 .modal{
     width:500px;height:200px;background-color: rgb(255, 255, 255);

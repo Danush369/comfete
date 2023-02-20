@@ -112,6 +112,7 @@ include("../dbconn/fdata2.php");
      </div>
      
   </div>
+  <div id='rnd_name'>Ode On Codes</div>
   <div id="timer"></div>
   <button class="submit" id="submit" onclick="showModal()">Submit</button>
   <script src="../script/index.js"></script>

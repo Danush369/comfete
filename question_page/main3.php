@@ -106,6 +106,7 @@ include("../dbconn/fdata3.php");
      
   </div>
   <div id="timer"></div>
+  <div id='rnd_name'>Adventors</div>
   <button class="submit" id="submit" onclick="showModal()">Submit</button>
   <script src="../script/index.js"></script>
   <script src="../script/check3.js"></script>

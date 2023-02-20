@@ -1,9 +1,10 @@
 const timer=document.getElementById('timer');
-j=59
-i=29
+j=59;
+i=29;
 me()
 function me(){
    if(j==0 && i==0){
+      alert("Sorry, Your Time is Up!");
       checkmark();
    }
    if(j>=0 ){

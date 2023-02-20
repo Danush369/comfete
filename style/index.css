@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway:wght@300&display=swap');
+
 *{padding: 0;margin: 0;}   
 /*To split into two*/
 body   {
@@ -11,10 +13,11 @@ cursor: url('../images/mous3.png'),auto;
 .left {
     height:100vh;
     display: block;
-    width: 4%;
+    width: 5%;
     scrollbar-width: none;
     overflow: auto;
-    background: #090132;
+    /* background: rgb(0,4,91); */
+    background: linear-gradient(200deg,#7b2585 15%, rgb(1 8 37)50%);
 }
 
 .right {
@@ -50,7 +53,7 @@ cursor: url('../images/mous3.png'),auto;
   
 .quiz-container {
     max-width: 700px;
-    margin: 140px auto auto;box-sizing: border-box;
+    margin: 150px auto auto;box-sizing: border-box;
     text-align: center;padding:auto 15%;
 
 }
@@ -106,6 +109,7 @@ display:flex;justify-content: space-between;
     width: 120px;
     font-family: 'Raleway', sans-serif;
 }
+
 .button:hover {
     transform:rotate(180);
     box-shadow: 0px 0px 10px white;
@@ -127,14 +131,19 @@ font-weight: bold;box-shadow: inset 3px 2px rgb(92, 88, 87), 4px 4px white;
 .question-number{display:flex;flex-wrap: wrap;
     justify-content:center ;}
 .number {
-   color: white;width: 80%;
-    padding: 5px;
+    color: white;width:50px;
+    padding: 5px;width:22px;
     border-radius: 5px;
     margin: 8px 3px auto;
-    cursor: pointer;
-    border: 1px solid #004eff;
-    text-align: center;
-    
+    /* cursor: pointer; */
+    border: 1px solid #ffffff;
+    text-align: center; 
+}
+.number:hover{
+    background-color: #ffffff;
+    color:#1a3ef0;
+    box-shadow: 0px 0px 10px white;
+
 }
 .active{color:white;background-color:#004eff;}
 .submit{padding:10px 20px;background-color:#004eff;
@@ -147,7 +156,7 @@ margin-left: 5%;
 
 border-radius: 20px;}
 .avatar-container .avatar{
-    width:35px;height:35px;border-radius:50%;
+    width:60px;height:70px;border-radius:50%;
     margin:15px 14px auto;float:left;
 }
 .avatar-container .avatar img{
@@ -171,7 +180,18 @@ line-height:28px;}
     text-decoration: none;
     border: 1px solid #004eff;
 }
-.modal{
+#rnd_name{
+    color:#ffffff;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    font-family: Josefin Sans;
+    /* border-color: #ffffff; */
+    /* border:ridge; */
+    padding: 10px;
+    /* border-radius: 5px; */
+    position:fixed;right: 15%; top: 10px;
+}
+.modal,.t-modal{
     width:500px;height:200px;background-color: rgb(255, 255, 255);
     position:absolute;top:200px;left:280px;z-index: 1;display:none;
     border-radius:5%;

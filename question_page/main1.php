@@ -58,7 +58,7 @@ include("../dbconn/fdata1.php");
       echo "
       <div class='avatar-container'>
         <div class='avatar'>
-          <img src='../images/avatar.png' alt='Profile'>
+          <img src='../images/avatar.jpg' alt='Profile'>
         </div>
         <div class='name-box'><b>
           <p class='avatar-name' id='pname'>$name</p></b>"."
@@ -106,6 +106,7 @@ include("../dbconn/fdata1.php");
      </div>
      
   </div>
+  <div id='rnd_name'>Brain Stormers</div>
   <div id="timer"></div>
   <button class="submit" id="submit" onclick="showModal()">Submit</button>
   <script src="../script/timer.js"></script>
