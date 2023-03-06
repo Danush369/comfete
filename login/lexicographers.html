@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMFETE 2023</title>
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+<style>
+@font-face {
+            font-family: "Bungee Shade";
+            src: url("../fonts/BungeeShade-Regular.ttf");
+            }
+            @font-face {
+            font-family: "Righteous";
+            src: url("../fonts/Righteous-Regular.ttf");
+            }
+    *{padding: 0;margin: 0;}
+    body{font-family: 'Righteous';background-image: url('../images/frame4.jpeg');background-repeat: no-repeat;background-attachment: fixed;background-position: center center;background-size:cover;}
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;box-sizing: border-box;
+      padding: 1px 10%;
+    }
+    h2{
+      text-align:center;color:white;margin:5px;margin-bottom:10px;font-weight: normal;}
+    label{font-size: 20px;font-weight: lighter;color:white;font-family:Righteous;
+      letter-spacing: 3px;
+    }
+input {
+  font-family:Righteous;
+      width: 100%;font-size: 1.2rem;
+      padding: 8px 20px;
+      margin: 12px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: rgb(0,0,0,0);
+      color:white;
+}
+h2,.close{
+  font-family: Bungee Shade;
+}
+    input:focus{outline:3px solid rgb(103,218,253);background-color: rgb(0,0,0,0);}
+
+    .close{color:red;font-size: 2.5rem;float:right;font-weight: bold;}
+    .close:hover{color:rgb(103,218,253);}
+
+    form{box-sizing: border-box; padding:25px;
+    margin-top:12%;font-family: 'Poppins', sans-serif;}
+    .btn-juicy {
+	box-shadow: 5px 10px #ffffff;
+	transition: 0.2s;
+}
+.btn-juicy:hover:active {
+	transition: 0.1s;
+	box-shadow: 1px 2px #157494;
+	transform: translate(5px, 6px);
+}
+.btn-juicy:hover {
+  color:#ffffff;
+  background-color: rgb(0, 120, 156);
+	box-shadow: 6px 6px rgb(255, 255, 255);
+	transform: translate(-1px, -2px);
+}
+.btn {
+	color: white;
+	letter-spacing: 2px;
+	border-radius: 4px;
+	border-color: #ffffff;
+	background-color: #0e5066;
+	text-decoration: none;
+	font-family: Righteous;
+	font-weight: bolder;
+	padding: 5px;
+	/* margin: 10px; */
+	user-select: none;
+	-webkit-user-drag: none;
+	width: 25%;
+  position: absolute;
+  bottom :26%;
+  left : 37.5%;
+	font-size: 17px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form action="../question_page/lexicographers.php" method="get">
+      <span class="close" onclick="window.history.back();">&times;</span>
+      <h2>Login</h2>
+
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+      
+      <label for="college">College Name:</label><br>
+      <input type="text" id="college" name="college" required>
+
+      <label for="email">Email ID:</label><br>
+      <input type="email" id="email" name="email" required><br>
+      
+      <button class="btn btn-juicy">Start</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
